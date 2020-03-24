@@ -1,0 +1,15 @@
+.intro {
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbba1f;
+
+  p {
+    font-size: 4rem;
+    text-align: center;
+    max-width: 400px;
+    font-weight: 600;
+    color: #fff;
+  }
+}
