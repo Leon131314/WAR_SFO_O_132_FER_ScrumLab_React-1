@@ -1,6 +1,6 @@
 import React from "react";
 import CallToAction from "./callToAction";
-
+import SubmitForm from "./submitForm";
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
         </p>
       </section>
         <CallToAction/>
+        <SubmitForm/>
     </>
   );
 };
