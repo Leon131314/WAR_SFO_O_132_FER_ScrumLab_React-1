@@ -1,5 +1,5 @@
 import React from "react";
-import CallToAction from "./callToAction";
+import CallToAction from "./CallToAction";
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 
 const Navigation = ()=>(
