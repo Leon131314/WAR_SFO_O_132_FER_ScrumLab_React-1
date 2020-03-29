@@ -1,5 +1,7 @@
 import React from "react";
 import CallToAction from "./callToAction";
+import Stopka from "./Stopka";
+
 
 
 const App = () => {
@@ -14,6 +16,7 @@ const App = () => {
         </p>
       </section>
         <CallToAction/>
+        <Stopka/>
     </>
   );
 };
