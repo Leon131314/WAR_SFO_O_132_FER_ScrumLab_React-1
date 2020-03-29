@@ -1,5 +1,6 @@
 import React from "react";
 import CallToAction from "./callToAction";
+import Autor from "./autor";
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         </p>
       </section>
         <CallToAction/>
+        <Autor/>
     </>
   );
 };
