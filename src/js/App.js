@@ -1,4 +1,5 @@
 import React from "react";
+import CallToAction from "./callToAction";
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
           Scrum Lab React
         </p>
       </section>
+        <CallToAction/>
     </>
   );
 };
