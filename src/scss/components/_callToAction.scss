@@ -1,40 +1,4 @@
-@import "colors";
-@import "fonts";
-
 .callToAction {
-  align-items: center;
-  background: $headerColor;
-  color: $backgroundColor;
   display: flex;
-  font-family: $textFont;
   justify-content: space-around;
-  height: 150px;
-}
-
-.callToAction-btn {
-  //background: $buttonsColor;
-  border: none;
-  //color: $backgroundColor;
-  //font-family: $textFont;
-  //padding: 8px 25px;
-  //transition: 0.1s ease-in;
-  //&:hover{
-  //  background: $backgroundColor;
-  //  color: $buttonsColor;
-  //}
-}
-
-.callToAction-btn-a {
-  background: $buttonsColor;
-  color: $backgroundColor;
-  font-family: $textFont;
-  padding: 8px 25px;
-  text-decoration: none;
-  transition: 0.1s ease-in;
-
-  &:hover{
-    background: $backgroundColor;
-    color: $buttonsColor;
-    text-decoration: none;
-  }
 }
