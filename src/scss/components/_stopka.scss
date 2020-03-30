@@ -1,0 +1,40 @@
+.footer{
+  display: flex;
+  color: white;
+  background-color: #4a4a49;
+  padding: 30px;
+}
+.footer1{
+  width: 30%;
+  margin:60px;
+}
+.footer2{
+  background-color: #4a4a49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer2:after { content: " ZaplanujJedzonko.pl "; color: #E58A20 }
+.footer3{
+display: block;
+}
+.footer-icn{
+  display: inline;
+  height: 30px;
+}
+.footer-icn2{
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+}
+.footer-btn{
+  background-color: #E58A20;
+  height: 20px;
+  color: white;
+  border: #E58A20;
+  width: 60px;
+}
+.footer-input{
+  display: flex;
+
+}
