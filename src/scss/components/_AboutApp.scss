@@ -1,0 +1,27 @@
+@import "colors";
+@import "fonts";
+
+.AboutApp-mainFrame {
+  align-items: center;
+  background: $backgroundColor;
+  color: $textColor;
+  display: flex;
+  font-family: $textFont;
+  justify-content: space-around;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.AboutApp-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.AboutApp-box {
+  padding: 20px 100px;
+
+  & i {
+    font-size: 45px;
+  }
+}
