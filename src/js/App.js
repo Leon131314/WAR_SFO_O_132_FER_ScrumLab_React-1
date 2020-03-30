@@ -1,6 +1,8 @@
 import React from "react";
 import CallToAction from "./CallToAction";
 import AboutApp from "./AboutApp";
+import SubmitForm from "./submitForm";
+
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 
 const Navigation = ()=>(
@@ -14,6 +16,7 @@ const Navigation = ()=>(
         </ul>
     </nav>
 );
+
 
 
 const App = () => {
@@ -38,6 +41,7 @@ const App = () => {
       </section>
         <CallToAction/>
         <AboutApp/>
+        <SubmitForm/>
     </>
   );
 };
