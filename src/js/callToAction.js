@@ -9,7 +9,7 @@ const CallToAction = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis ex fuga omnis quod temporibus.</p>
             </div>
 
-            <button className="callToAction-btn btn">Lorem ipsum</button>
+            <button className="callToAction-btn"><a className='callToAction-btn-a' href="#top">Lorem ipsum</a></button>
 
         </div>
     )
