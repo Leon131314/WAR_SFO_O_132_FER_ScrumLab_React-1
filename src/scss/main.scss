@@ -1,4 +1,15 @@
+@import "./components/colors";
+@import "./components/fonts";
+
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+
+s* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,3 +21,7 @@ body {
 
 @import "./components/header";
 @import "./components/intro";
+@import "./components/callToAction";
+@import "./components/submitForm";
+@import "./components/navigation";
+
