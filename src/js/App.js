@@ -1,5 +1,6 @@
 import React from "react";
-import CallToAction from "./callToAction";
+import CallToAction from "./CallToAction";
+import AboutApp from "./AboutApp";
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 
 const Navigation = ()=>(
@@ -36,6 +37,7 @@ const App = () => {
         </p>
       </section>
         <CallToAction/>
+        <AboutApp/>
     </>
   );
 };
