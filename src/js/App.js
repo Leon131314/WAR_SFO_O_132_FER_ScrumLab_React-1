@@ -1,5 +1,9 @@
 import React from "react";
+
+import Autor from "./autor";
+
 import Stopka from "./Stopka";
+
 import CallToAction from "./CallToAction";
 import AboutApp from "./AboutApp";
 import SubmitForm from "./submitForm";
@@ -41,6 +45,7 @@ const App = () => {
         </p>
       </section>
         <CallToAction/>
+        <Autor/>
         <AboutApp/>
         <SubmitForm/>
         <Stopka/>

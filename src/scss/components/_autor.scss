@@ -1,0 +1,25 @@
+.autor{
+  display:flex;
+  background-color: #FFFFFA;
+  height: 500px;
+}
+.autor-img{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.autor-img-in{
+  background-color: #4a4a49;
+  height: 300px;
+  width: 300px;;
+}
+.autor-txt{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.autor-txt-in{
+  margin-top: 80px;
+  margin-right: 100px;
+}
