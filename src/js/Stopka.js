@@ -34,6 +34,7 @@ class Stopka extends React.Component{
                         <IoLogoFacebook className="footer-icn2" />
                         <IoLogoTwitter className="footer-icn2"/>
                         <IoLogoInstagram className="footer-icn2" />
+
                     </div>
                  </div>
                 </div>

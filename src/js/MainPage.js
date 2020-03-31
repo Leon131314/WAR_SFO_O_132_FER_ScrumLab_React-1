@@ -1,5 +1,6 @@
 import React from "react";
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
+import Name from "./Name";
 
 
 
@@ -15,6 +16,22 @@ const MainPageNav = ()=>(
 
 
 const TopPanel =() =>(
+
+///////imię/////////
+//     state = {
+//         name: null,
+//     };
+//     componentDidMount() {
+//         const name = JSON.parse(localStorage.getItem('name'));
+//         console.log(name);
+//         this.setState({
+//             name: name,
+//         })
+//     }
+///////imię/////////
+
+
+
 <div className="topPanel">
     <h1 className="nav-h">Zaplanuj </h1>
     <h1 className="rightSide">Imie + logo </h1>
@@ -28,6 +45,7 @@ const MainPage = () => {
             <HashRouter>
                 <MainPageNav />
                 <div>
+                    <Name/>
                     <Switch>
                         <Route />
                     </Switch>
