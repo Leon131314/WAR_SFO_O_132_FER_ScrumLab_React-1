@@ -1,0 +1,26 @@
+@import "fonts";
+@import "colors";
+
+.widget {
+  align-items: center;
+  border: 1px dashed $textColor;
+  color: $textColor;
+  display: flex;
+  flex-direction: column;
+  font-family: $textFont;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
+  &:hover{
+    color: $headerColor;
+    border: 1px dashed $headerColor;
+  }
+}
+
+.widget-txt {
+  margin-top: 4px;
+}
+
+.fa-plus-square{
+  font-size: 45px;
+}

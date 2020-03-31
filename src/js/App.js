@@ -3,7 +3,8 @@ import React from "react";
 import Autor from "./autor";
 import Gallery from "./Gallery";
 import Stopka from "./Stopka";
-
+import AddRecipe from "./AddRecipe";
+import AddSchedule from "./AddSchedule";
 import CallToAction from "./CallToAction";
 import AboutApp from "./AboutApp";
 import SubmitForm from "./submitForm";
@@ -52,6 +53,8 @@ const App = () => {
         <AboutApp/>
         <SubmitForm/>
         <Stopka/>
+        {/*<AddRecipe/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
+        {/*<AddSchedule/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
         {/*<MainPage/>*/}
     </>
   );
