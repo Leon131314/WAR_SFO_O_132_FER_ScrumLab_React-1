@@ -1,7 +1,7 @@
 import React from "react";
 
 import Autor from "./autor";
-
+import Gallery from "./Gallery";
 import Stopka from "./Stopka";
 
 import CallToAction from "./CallToAction";
@@ -43,6 +43,7 @@ const App = () => {
         <p>
           Scrum Lab React
         </p>
+          <Gallery/>
       </section>
         <CallToAction/>
         <Autor/>
