@@ -42,21 +42,23 @@ const MainPage = () => {
     return (
         <div className="mainPage">
             <TopPanel/>
-            <HashRouter>
-                <MainPageNav />
-                <div>
-                    <Name/>
-                    <Switch>
-                        <Route />
-                    </Switch>
-                </div>
-            </HashRouter>
-
+            <div className="mainPage-content">
+                <HashRouter>
+                    <MainPageNav />
+                    <div>
+                        <div className="mainPage-background"> {/*Leszek tego do tego diva mozesz dodac tlo do glownego widoku ==TK==*/}
+                            <div className="name-container"> {/*Dodatkowy div zeby mozna bylo wycentrowac wszystkie elementy ==TK==*/}
+                                <Name/>
+                            </div>
+                        </div>
+                        <Switch>
+                            <Route />
+                        </Switch>
+                    </div>
+                </HashRouter>
+            </div>
         </div>
     )
 };
 
-
-
 export default MainPage;
-

@@ -1,7 +1,33 @@
-
+@import "colors";
+@import "fonts";
 
 .mainPage {
-  height: 1000px;
+  height: 100vh;
+}
+
+.mainPage-background {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: calc(100vw - 150px);
+}
+
+.mainPage-content {
+  display: flex;
+}
+
+.name-container{
+  align-items: center;
+  background: $backgroundColor;
+  border: 1px dashed $headerColor;
+  color: lighten($headerColor, 10%); //dalem 10% lighten bo sam $headerColor wydawal sie za ciemny w porownaniu do makiety ==TK==
+  display: flex;
+  flex-direction: column;
+  font-family: $textFont;
+  height: 80vh;
+  justify-content: center;
+  width: 80vw;
 }
 
 .topPanel {
@@ -21,7 +47,7 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 150px;
-  height: 500px;
+  height: 100vh;
   background-color: #4a4a49;
 }
 
