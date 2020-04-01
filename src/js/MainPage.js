@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 import Name from "./Name";
+import NewRecipe from "./NewRecipe";
 
 
 
@@ -50,10 +51,12 @@ const MainPage = () => {
             <div className="mainPage-content">
                 <HashRouter>
                     <MainPageNav />
+
                     <div>
                         <div className="mainPage-background"> {/*Leszek tego do tego diva mozesz dodac tlo do glownego widoku ==TK==*/}
                             <div className="name-container"> {/*Dodatkowy div zeby mozna bylo wycentrowac wszystkie elementy ==TK==*/}
                                 <Name/>
+                                {/*<NewRecipe/>/!*TEST *!/*/}
                             </div>
                         </div>
                         <Switch>

@@ -1,0 +1,50 @@
+.nr-main{
+  align-items: center;
+  background: $backgroundColor;
+  border: 1px dashed $headerColor;
+  color: lighten($headerColor, 10%); //dalem 10% lighten bo sam $headerColor wydawal sie za ciemny w porownaniu do makiety ==TK==
+  display: flex;
+  flex-direction: column;
+  font-family: $textFont;
+  height: 80vh;
+  justify-content: center;
+  width: 80vw;
+  padding: 40px;
+}
+.nr-header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.nr-button{
+  background-color: #E58A20;
+  height: 40px;
+  color: white;
+  border: #E58A20;
+  width: 120px;
+}
+.nr-recipe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+.nr-recipe-name{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.nr-recipe-input{
+  width: 600px;
+  margin: 10px;
+}
+.nr-ingr{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.nr-ingr-n{
+  width: 50%;
+}
