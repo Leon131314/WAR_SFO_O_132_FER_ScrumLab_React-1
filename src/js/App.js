@@ -25,8 +25,6 @@ const Navigation = ()=>(
     </nav>
 );
 
-
-
 const App = () => {
   return (
     <>
@@ -34,20 +32,12 @@ const App = () => {
             <Navigation />
             <div>
                 <Switch>
-                    <Route />
+                    <Route /> {/*Wydaje mi sie ze tutaj bedzie trzeba wsadzic component={MainPage} i dodac jeszcze kilka Route zeby podpiac wszytkie linki ==TK==*/}
                 </Switch>
             </div>
         </HashRouter>
 
-        <header>
-        <img src="https://coderslab.pl/img/coderslab-logo.png" className="logoImage" alt="logo"/>
-      </header>
-      <section className="intro">
-        <p>
-          Scrum Lab React
-        </p>
-          <Gallery/>
-      </section>
+        <Gallery/>
         <CallToAction/>
         <Autor/>
         <AboutApp/>
@@ -59,11 +49,5 @@ const App = () => {
     </>
   );
 };
-
-
-
-
-
-
 
 export default App;

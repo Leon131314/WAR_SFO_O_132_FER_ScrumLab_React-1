@@ -13,19 +13,17 @@ s* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} //ktos wie co to jest za selector??? bo wydaje mi sie ze nic nie robi w naszym przypadku ==TK==
 
 body {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 @import "./components/header";
 @import "./components/intro";
-
 @import "./components/autor";
-
 @import "./components/stopka";
-
 @import "./components/callToAction";
 @import "./components/navigation";
 @import "./components/AboutApp";
