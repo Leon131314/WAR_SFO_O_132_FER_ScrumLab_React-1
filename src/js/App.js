@@ -42,9 +42,6 @@ const App = () => {
         <img src="https://coderslab.pl/img/coderslab-logo.png" className="logoImage" alt="logo"/>
       </header>
       <section className="intro">
-        <p>
-          Scrum Lab React
-        </p>
           <Gallery/>
       </section>
         <CallToAction/>

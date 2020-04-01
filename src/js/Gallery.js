@@ -12,13 +12,9 @@ const gal = [img1, img2, img3];
 const Gallery = ()=>{
     return (
         <div className="container">
-            <div className="row">
-                <div className="col-12-12">
                     <div className="box">
                         <Slideshow className="box-image"/>
                     </div>
-                </div>
-            </div>
         </div>
 
     )
