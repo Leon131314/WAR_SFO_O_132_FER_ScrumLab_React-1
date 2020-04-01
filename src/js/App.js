@@ -3,7 +3,8 @@ import React from "react";
 import Autor from "./autor";
 import Gallery from "./Gallery";
 import Stopka from "./Stopka";
-
+import AddRecipe from "./AddRecipe";
+import AddSchedule from "./AddSchedule";
 import CallToAction from "./CallToAction";
 import AboutApp from "./AboutApp";
 import SubmitForm from "./submitForm";
@@ -24,8 +25,6 @@ const Navigation = ()=>(
     </nav>
 );
 
-
-
 const App = () => {
   return (
     <>
@@ -33,7 +32,7 @@ const App = () => {
             <Navigation />
             <div>
                 <Switch>
-                    <Route />
+                    <Route /> {/*Wydaje mi sie ze tutaj bedzie trzeba wsadzic component={MainPage} i dodac jeszcze kilka Route zeby podpiac wszytkie linki ==TK==*/}
                 </Switch>
             </div>
         </HashRouter>
@@ -44,20 +43,17 @@ const App = () => {
       <section className="intro">
           <Gallery/>
       </section>
+
         <CallToAction/>
         <Autor/>
         <AboutApp/>
         <SubmitForm/>
         <Stopka/>
+        {/*<AddRecipe/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
+        {/*<AddSchedule/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
         {/*<MainPage/>*/}
     </>
   );
 };
-
-
-
-
-
-
 
 export default App;
