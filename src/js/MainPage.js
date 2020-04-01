@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, {Component} from 'react';
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 import Name from "./Name";
 
@@ -15,28 +16,32 @@ const MainPageNav = ()=>(
 );
 
 
-const TopPanel =() =>(
-
+// const TopPanel =() =>(
+class TopPanel extends Component {
 ///////imię/////////
-//     state = {
-//         name: null,
-//     };
-//     componentDidMount() {
-//         const name = JSON.parse(localStorage.getItem('name'));
-//         console.log(name);
-//         this.setState({
-//             name: name,
-//         })
-//     }
+        state = {
+            name: null,
+        };
+
+        componentDidMount() {
+            const name = JSON.parse(localStorage.getItem('name'));
+            console.log(name);
+            this.setState({
+                name: name,
+            });
+        }
 ///////imię/////////
 
-
-
-<div className="topPanel">
-    <h1 className="nav-h">Zaplanuj </h1>
-    <h1 className="rightSide">Imie + logo </h1>
-</div>
-);
+            render(){
+                return (
+                    <div className="topPanel">
+                        <h1 className="nav-h">Zaplanuj </h1>
+                        <h1 className="rightSide">  {this.state.name} logo</h1>
+                    </div>
+                )
+            }
+            ;
+}
 
 const MainPage = () => {
     return (
