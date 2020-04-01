@@ -1,0 +1,87 @@
+.message-container {
+  width: 420px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.message-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 820px;
+  height: 70px;
+  margin: 5px;
+  border: dotted 2px $infoMessageColor;
+  padding: 5px;
+  background-color: $backgroundColor;
+  position: relative;
+}
+.message-info-icon1 {
+  color: $infoMessageColor;
+}
+.message-info-text {
+  color: $infoMessageColor;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+  position:absolute;
+  left: 85px;
+}
+.message-info-icon2 {
+  color: $infoMessageColor;
+}
+
+.message-warning {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 820px;
+  height: 70px;
+  margin: 5px;
+  border: dotted 2px $warningMessageColor;
+  padding: 5px;
+  background-color: $backgroundColor;
+  position: relative;
+}
+.message-warning-icon1 {
+  color: $warningMessageColor;
+}
+.message-warning-text {
+  color: $warningMessageColor;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+  position:absolute;
+  left: 85px;
+}
+.message-warning-icon2 {
+  color: $warningMessageColor;
+}
+
+.message-success {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 820px;
+  height: 70px;
+  margin: 5px;
+  border: dotted 2px $successMessageColor;
+  padding: 5px;
+  background-color: $backgroundColor;
+  position: relative;
+}
+.message-success-icon1 {
+  color: $successMessageColor
+}
+.message-success-text {
+  color: $successMessageColor;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+  position:absolute;
+  left: 85px;
+}
+.message-success-icon2 {
+  color: $successMessageColor;
+}

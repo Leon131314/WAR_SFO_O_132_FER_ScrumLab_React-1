@@ -37,7 +37,13 @@ const App = () => {
             </div>
         </HashRouter>
 
-        <Gallery/>
+        <header>
+        <img src="https://coderslab.pl/img/coderslab-logo.png" className="logoImage" alt="logo"/>
+      </header>
+      <section className="intro">
+          <Gallery/>
+      </section>
+
         <CallToAction/>
         <Autor/>
         <AboutApp/>
