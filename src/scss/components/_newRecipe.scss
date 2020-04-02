@@ -9,13 +9,20 @@
   height: 80vh;
   justify-content: center;
   width: 80vw;
-  padding: 40px;
+  padding: 60px;
 }
 .nr-header{
   display: flex;
   justify-content: space-between;
   width: 100%;
+  border-style: solid;
+  border-width: 0 0 5px 0;
+  text-transform: uppercase;
 }
+.nr-h1{
+  color: #E58A20;
+}
+
 .nr-button{
   background-color: #E58A20;
   height: 40px;
@@ -29,6 +36,7 @@
   align-items: center;
   width: 100%;
   flex-direction: column;
+  height: 30%;
 }
 .nr-recipe-name{
   display: flex;
@@ -37,14 +45,40 @@
   width: 100%;
 }
 .nr-recipe-input{
-  width: 600px;
+  width: 80%;
   margin: 10px;
 }
 .nr-ingr{
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 50%;
+
 }
 .nr-ingr-n{
   width: 50%;
+  padding: 10px;
+}
+.nr-ingr-h2{
+  border-style: solid;
+  border-width: 0 0 5px 0;
+}
+.nr-ingr-input{
+  width: 95%;
+  margin-right: 5px;
+  height: 20%;
+}
+.nr-ingr-btn{
+  background-color: #339966 ;
+  border: #339966;
+  width: 4%;
+  font-size: 30px;
+  color: white;
+  height: 10%;
+
+}
+.nr-ingr-input-2{
+  width: 95%;
+  min-height: 200px;
+  height: auto;
 }
