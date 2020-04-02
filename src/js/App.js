@@ -49,9 +49,9 @@ const App = () => {
         <AboutApp/>
         <SubmitForm/>
         <Stopka/>
-        {/*<AddRecipe/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
+        {/*<AddRecipe/> tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
         {/*<AddSchedule/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
-        {/*<MainPage/>*/}
+        <MainPage/>
     </>
   );
 };

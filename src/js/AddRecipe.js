@@ -1,9 +1,10 @@
+
 import React from 'react';
 
 const AddRecipe = () =>{
 
-   const handleClick = () =>{
-      console.log('click') //tutaj bedziemy chcieli wywolac okno dodania przepisu, ale jeszcze go nie mamy ==TK==
+    const handleClick = () =>{
+        console.log('click') //tutaj bedziemy chcieli wywolac okno dodania przepisu, ale jeszcze go nie mamy ==TK==
     };
 
     return(
