@@ -1,0 +1,99 @@
+.week-view-container {
+  width: 1050px;
+  border: dotted 2px $textColor;
+//usunąć te 3 pozycje:
+  margin-top: 180px;
+  margin-left: 265px;
+  margin-bottom: 10px;
+}
+.week-view-wrapper {
+  display: grid;
+  width: 920px;
+  margin-left: 55px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 1fr 2fr 1fr 2fr 1fr;
+  grid-gap: 0;
+}
+/*  grid-template-areas:
+  "week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line"
+  "week-view-day week-view-day week-view-day week-view-day week-view-day week-view-day week-view-day"
+  "week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line"
+  "week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main"
+  "week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line"
+  "week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main"
+  "week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line"
+  "week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main"
+  "week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line"
+  "week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main"
+  "week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line"
+  "week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main week-view-main"
+  "week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line week-view-line"
+*/
+
+.week-view-header {
+  text-align: center;
+  color: $buttonsColor;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.week-view-day {
+  padding-left: 5px;
+  padding-top: 12px;
+  padding-bottom: 4px;
+  font-weight: bold;
+  font-size: 20px;
+  color: $headerColor;
+  border-bottom: solid 1px $textColor;
+  border-top: solid 1px $textColor;
+}
+.week-view-main {
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  color: $textColor;
+  border-bottom: solid 1px $textColor;
+}
+.week-view-main1 {
+  @extend .week-view-main;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+.week-view-main2 {
+  @extend .week-view-main;
+  padding-top: 10px;
+}
+.week-view-footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  color: $buttonsColor;
+}
+.fa-angle-double-left {
+  color: $buttonsColor;
+  font-size: 28px;
+}
+.fa-angle-double-right {
+  @extend .fa-angle-double-left;
+}
+.week-view-footer-aside {
+  display: flex;
+
+}
+.week-view-footer-arrows {
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+a {
+  color: $buttonsColor;
+  &:hover {
+    text-decoration: none;
+    color: $buttonsColor;
+  }
+}
