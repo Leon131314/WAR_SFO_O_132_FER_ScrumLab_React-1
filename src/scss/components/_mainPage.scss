@@ -54,8 +54,46 @@
 
 .mainNav-ul{
   display:flex;
-  align-items:center;
   justify-content: space-around;
   list-style: none;
   flex-direction: column;
+  height: 200px;
+  margin-left: 0;
+  font-family: $textFont;
+
+}
+
+.fa-user-circle {
+  color: $buttonsColor;
+}
+
+//.fa-chevron-right {
+//  display: none;
+//}
+
+.mainPage-background {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: calc(100vw - 150px);
+  background-image: url("../imageTest/backgroundImage.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mainNav-ul li:active:before {
+  background-color: $buttonsColor;
+  width: 10px;
+  height: 100%;
+  content: "";
+  padding-left: 20px;
+  margin-right: -10px;
+}
+
+.mainNav-ul li:active {
+  .fa-chevron-right {
+    color: orange;
+  }
 }
