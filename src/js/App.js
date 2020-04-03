@@ -1,4 +1,4 @@
-import React from "react";
+import React rom "react";
 
 import Autor from "./autor";
 import Gallery from "./Gallery";
@@ -6,6 +6,9 @@ import Stopka from "./Stopka";
 import CallToAction from "./CallToAction";
 import AboutApp from "./AboutApp";
 import SubmitForm from "./submitForm";
+import MainPage from "./MainPage";
+
+
 
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 
@@ -40,6 +43,12 @@ const App = () => {
         <AboutApp/>
         <SubmitForm/>
         <Stopka/>
+
+        {/*<AddRecipe/> tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
+        {/*<AddSchedule/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
+        <MainPage/>
+       
+
     </>
   );
 };
