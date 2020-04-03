@@ -3,15 +3,16 @@ import React, {Component} from 'react';
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 import Name from "./Name";
 import NewRecipe from "./NewRecipe";
+import Pulpit from "./Pulpit";
 
 
 
 const MainPageNav = ()=>(
     <nav className="navigation-main" >
         <ul className="mainNav-ul">
-            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} exact to="/" >Pulpit</NavLink></li>
-            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} to="/dlaczego/">Przepisy</NavLink></li>
-            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} to="/o mnie">Plany</NavLink></li>
+            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} exact to="/main/pulpit" >Pulpit</NavLink></li>
+            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} to="/main/dlaczego/">Przepisy</NavLink></li>
+            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} to="/o mnie">Plany</NavLink></li> {/*//SPACJA W LINKU(!)*/}
         </ul>
     </nav>
 );
@@ -44,29 +45,37 @@ class TopPanel extends Component {
             ;
 }
 
-const MainPage = () => {
-    return (
-        <div className="mainPage">
-            <TopPanel/>
-            <div className="mainPage-content">
-                <HashRouter>
-                    <MainPageNav />
+class MainPage extends Component {
 
-                    <div>
-                        <div className="mainPage-background"> {/*Leszek tego do tego diva mozesz dodac tlo do glownego widoku ==TK==*/}
-                            <div className="name-container"> {/*Dodatkowy div zeby mozna bylo wycentrowac wszystkie elementy ==TK==*/}
-                                <Name/>
-                                {/*<NewRecipe/>/!*TEST *!/*/}
+    constructor(props) {
+        super(props);
+
+    }
+
+
+    render() {
+        return (
+            <div className="mainPage">
+                <TopPanel/>
+                <div className="mainPage-content">
+                        <MainPageNav/>
+                        <div>
+                            <div className="mainPage-background">
+                                <div className="name-container">
+                                    {
+                                        {
+                                            "/main/pulpit": <Pulpit/>,
+                                            "/main": <Name/>
+                                        }[this.props.location.pathname]
+                                    }
+                                    {/*<NewRecipe/>/!*TEST *!/*/}
+                                </div>
                             </div>
                         </div>
-                        <Switch>
-                            <Route />
-                        </Switch>
-                    </div>
-                </HashRouter>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 };
 
 export default MainPage;

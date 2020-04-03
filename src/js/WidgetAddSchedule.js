@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AddSchedule = () =>{
+const WidgetAddSchedule = () =>{
 
     const handleClick = () =>{
         console.log('click') //tutaj bedziemy chcieli wywolac okno dodania planu, ale jeszcze go nie mamy ==TK==
@@ -14,4 +14,4 @@ const AddSchedule = () =>{
     )
 };
 
-export default AddSchedule;
+export default WidgetAddSchedule;
