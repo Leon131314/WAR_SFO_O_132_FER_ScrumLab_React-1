@@ -56,7 +56,7 @@ const MainPage = () => {
                         <div className="mainPage-background"> {/*Leszek tego do tego diva mozesz dodac tlo do glownego widoku ==TK==*/}
                             <div className="name-container"> {/*Dodatkowy div zeby mozna bylo wycentrowac wszystkie elementy ==TK==*/}
                                 <Name/>
-                                {/*<NewRecipe/>/!*TEST *!/*/}
+                                <NewRecipe/>{/*TEST */}
                             </div>
                         </div>
                         <Switch>
