@@ -1,5 +1,6 @@
 import NewRecipe from './NewRecipe'
-import RecipeFormList from './RecipeFormList'
+import RecipeLists from './RecipeFormList'
+import uuid from 'uuid';
 
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -39,13 +40,27 @@ export default class RecipeForm extends React.Component {
         });
     };
 
+    handleChangeInstruction = (event) => {
+        this.setState({
+            ...this.state,
+            instructions: event.target.value
+        });
+    }
 
-    addInsctructions = (e) => {
+    handleChangeIngredient = (event) => {
+        this.setState({
+            ...this.state,
+            ingredients: event.target.value
+        });
+    };
+
+
+    addInstructions = (e) => {
         e.preventDefault();
         this.setState({
             recipes: this.state.recipes.concat([{
                 id: uuid.v4(),
-                insctructions: this.state.instructions,
+                instructions: this.state.instructions,
             }])
         });
 
@@ -65,8 +80,9 @@ export default class RecipeForm extends React.Component {
     render() {
         return(
             <>
-                <NewRecipe/>
-                <RecipeFormList/>
+                <NewRecipe addIngredient={this.addIngredients} addInstruction={this.addInstructions}
+                changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}/>
+                <RecipeLists class="recipe" recipes={this.state.recipes}/>
             </>
         )
     }

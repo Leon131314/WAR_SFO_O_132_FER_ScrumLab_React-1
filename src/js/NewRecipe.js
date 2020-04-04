@@ -22,15 +22,15 @@ class NewRecipe extends React.Component{
                     <div className="nr-ingr">
                         <div className="nr-ingr-n">
                             <h2 className="nr-ingr-h2">Instrukcje</h2>
-                            <textarea className="nr-ingr-input" name="nazwa" cols="x" rows="y"></textarea>
-                            <button className="nr-ingr-btn">+</button>
+                            <textarea className="nr-ingr-input" name="nazwa" cols="x" rows="y" onChange={this.props.changeInstruction}></textarea>
+                            <button className="nr-ingr-btn" onClick={this.props.addInstruction}>+</button>
                             {/*<textarea className="nr-ingr-input-2" name="nazwa" cols="x" rows="y"></textarea>*/}
                             {/*ZAKOMENTOWALEM BO TU INPUT RACZEJ NIE JEST POTRZEBNY*  -LZ*/}
                         </div>
                         <div className="nr-ingr-n">
                             <h2 className="nr-ingr-h2">Składniki</h2>
-                            <textarea className="nr-ingr-input" name="nazwa" cols="x" rows="y"></textarea>
-                            <button className="nr-ingr-btn">+</button>
+                            <textarea className="nr-ingr-input" name="nazwa" cols="x" rows="y" onChange={this.props.changeIngredient}></textarea>
+                            <button className="nr-ingr-btn" onClick={this.props.addIngredient}>+</button>
                             {/*<textarea className="nr-ingr-input-2" name="nazwa" cols="x" rows="y"></textarea>*/}
                             {/*ZAKOMENTOWALEM BO TU INPUT RACZEJ NIE JEST POTRZEBNY*  -LZ*/}
                         </div>
