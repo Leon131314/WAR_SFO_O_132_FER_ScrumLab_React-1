@@ -24,13 +24,15 @@ class NewRecipe extends React.Component{
                             <h2 className="nr-ingr-h2">Instrukcje</h2>
                             <textarea className="nr-ingr-input" name="nazwa" cols="x" rows="y"></textarea>
                             <button className="nr-ingr-btn">+</button>
-                            <textarea className="nr-ingr-input-2" name="nazwa" cols="x" rows="y"></textarea>
+                            {/*<textarea className="nr-ingr-input-2" name="nazwa" cols="x" rows="y"></textarea>*/}
+                            {/*ZAKOMENTOWALEM BO TU INPUT RACZEJ NIE JEST POTRZEBNY*  -LZ*/}
                         </div>
                         <div className="nr-ingr-n">
                             <h2 className="nr-ingr-h2">Składniki</h2>
                             <textarea className="nr-ingr-input" name="nazwa" cols="x" rows="y"></textarea>
                             <button className="nr-ingr-btn">+</button>
-                            <textarea className="nr-ingr-input-2" name="nazwa" cols="x" rows="y"></textarea>
+                            {/*<textarea className="nr-ingr-input-2" name="nazwa" cols="x" rows="y"></textarea>*/}
+                            {/*ZAKOMENTOWALEM BO TU INPUT RACZEJ NIE JEST POTRZEBNY*  -LZ*/}
                         </div>
                     </div>
                 </div>

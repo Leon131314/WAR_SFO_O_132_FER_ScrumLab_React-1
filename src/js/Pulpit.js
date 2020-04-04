@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import WidgetAddRecipe from "./WidgetAddRecipe";
 import WidgetAddSchedule from "./WidgetAddSchedule";
 import Messages from "./Messages";
-import NewRecipe from "./NewRecipe";
+import RecipeForm from "./NewRecipe";
 
 class Pulpit extends Component{
 
@@ -23,7 +23,7 @@ class Pulpit extends Component{
     render() {
         console.log("button addRecipe kliekniety: "+this.state.AddRecipeClickStatus);
         if (this.state.AddRecipeClickStatus) {
-            return <NewRecipe/>
+            return <RecipeForm/>
         } else {
             return(
                 <div className='pulpit'>
