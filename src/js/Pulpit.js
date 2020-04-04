@@ -2,31 +2,37 @@ import React, {Component} from 'react';
 import WidgetAddRecipe from "./WidgetAddRecipe";
 import WidgetAddSchedule from "./WidgetAddSchedule";
 import Messages from "./Messages";
+import NewRecipe from "./NewRecipe";
 
 class Pulpit extends Component{
 
     constructor(props) {
         super(props);
         this.state = {
-            AddRecipeClickStatus: ""
+            AddRecipeClickStatus: false
         }
 
     }
 
-    checkStatus = (AddRecipeData) => {
+    handleClick = () =>{
         this.setState({
-            AddRecipeClickStatus: AddRecipeData
-        })
+            AddRecipeClickStatus: true
+        });
     };
 
     render() {
-        return(
-            <div className='pulpit'>
-                <WidgetAddRecipe parentCallback={this.checkStatus}/>
-                <WidgetAddSchedule/>
-                <Messages/>
-            </div>
-        )
+        console.log("button addRecipe kliekniety: "+this.state.AddRecipeClickStatus);
+        if (this.state.AddRecipeClickStatus) {
+            return <NewRecipe/>
+        } else {
+            return(
+                <div className='pulpit'>
+                    <WidgetAddRecipe handleClick={this.handleClick}/>
+                    <WidgetAddSchedule/>
+                    <Messages/>
+                </div>
+            )
+        }
     }
 
 }
