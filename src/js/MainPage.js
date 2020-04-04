@@ -1,4 +1,4 @@
-// import React from "react";
+
 import React, {Component} from 'react';
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 import Name from "./Name";
@@ -6,11 +6,10 @@ import NewRecipe from "./NewRecipe";
 import Pulpit from "./Pulpit";
 
 
-
 const MainPageNav = ()=>(
     <nav className="navigation-main" >
         <ul className="mainNav-ul">
-            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} exact to="/main/pulpit" >Pulpit<i className="fas fa-chevron-right"></i></NavLink></li>
+            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} exact to="/main/pulpit">Pulpit<i className="fas fa-chevron-right"></i></NavLink></li>
             <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} to="/main/dlaczego/">Przepisy</NavLink></li>
             <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} to="/o mnie">Plany</NavLink></li> {/*//SPACJA W LINKU(!)*/}
         </ul>
@@ -51,7 +50,6 @@ class MainPage extends Component {
         super(props);
 
     }
-
 
     render() {
         return (
