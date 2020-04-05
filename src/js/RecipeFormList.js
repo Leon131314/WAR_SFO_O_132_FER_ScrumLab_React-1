@@ -10,11 +10,10 @@ export default class RecipeLists extends React.Component {
                         if (instruction.test !== '') {
                             return (
                                 <div key={instruction.test}>
-                                    <li className="Instructions">{instruction.test}
+                                    <li className="Instructions">{instruction.test} {' '}
                                     <i className="far fa-trash-alt" onClick={e => {
                                     this.props.remove(e,instruction)}}></i>
                                     </li>
-
                                 </div>
                             )
                         }
@@ -25,7 +24,10 @@ export default class RecipeLists extends React.Component {
                         if (recipe.ingredients !== '') {
                             return (
                                 <div key={recipe.ingredients}>
-                                    <li className="Ingredients">{recipe.ingredients}</li>
+                                    <li className="Ingredients">{recipe.ingredients} {'  '}
+                                        <i className="far fa-trash-alt" onClick={e => {
+                                            this.props.removeIngredient(e,recipe)}}></i>
+                                    </li>
                                 </div>
                             )
                         }
