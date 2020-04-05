@@ -11,16 +11,22 @@ export default class RecipeForm extends React.Component {
         this.state = {
             recipes: [
                 {
-                    id: 0,
-                    ingredientID: 0,
-                    instructionID: 0,
+                    // id: 0,
+                    // ingredientID: 0,
+                    // instructionID: 0,
                     title: '',
                     description: '',
                     instructions: '',
                     ingredients: '',
                     counter: 0,
                 },
+            ],
+            instruction: [
+                {
+                    test: ''
+                }
             ]
+
         };
 
     }
@@ -42,7 +48,7 @@ export default class RecipeForm extends React.Component {
     handleChangeInstruction = (event) => {
         this.setState({
             ...this.state,
-            instructions: event.target.value
+            test: event.target.value
         });
     }
 
@@ -57,12 +63,12 @@ export default class RecipeForm extends React.Component {
     addInstructions = (e) => {
         e.preventDefault();
         this.setState({
-            recipes: this.state.recipes.concat([{
-                // instructionID: uuid.v4(),
-                instructions: this.state.instructions,
+            instruction: this.state.instruction.concat([{
+                test: this.state.test,
             }])
         });
-
+        console.log(this.state.test);
+        console.log(this.state)
     };
 
     addIngredients = (e) => {
@@ -77,7 +83,7 @@ export default class RecipeForm extends React.Component {
     };
 
     removeInstruction(event, id) {
-        const array = [...this.state.recipes];
+        const array = [...this.state.test];
         const index = array.indexOf(id);
         array.splice(index, 1);
         this.setState({recipes: array});
@@ -90,7 +96,7 @@ export default class RecipeForm extends React.Component {
                 <NewRecipe addIngredient={this.addIngredients} addInstruction={this.addInstructions}
                 changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}
                 changeDescreiption={this.handleChangeDescription} changeTitle={this.handleChangeTitle}/>
-                <RecipeLists class="recipe" recipes={this.state.recipes} remove={this.removeInstruction}/>
+                <RecipeLists class="recipe" instructions={this.state.instruction} recipes={this.state.recipes} remove={this.removeInstruction}/>
             </div>
         )
     }
