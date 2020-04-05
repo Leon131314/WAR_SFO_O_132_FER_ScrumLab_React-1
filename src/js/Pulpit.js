@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import WidgetAddRecipe from "./WidgetAddRecipe";
 import WidgetAddSchedule from "./WidgetAddSchedule";
 import Messages from "./Messages";
-import RecipeForm from "./NewRecipe";
+import RecipeForm from "./RecipeForm";
 
 class Pulpit extends Component{
 

@@ -2,9 +2,6 @@ import NewRecipe from './NewRecipe'
 import RecipeLists from './RecipeFormList'
 import uuid from 'uuid';
 
-import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
-import FormControl from "react-bootstrap/FormControl";
 import React from "react";
 
 
@@ -15,6 +12,8 @@ export default class RecipeForm extends React.Component {
             recipes: [
                 {
                     id: 0,
+                    ingredientID: 0,
+                    instructionID: 0,
                     title: '',
                     description: '',
                     instructions: '',
@@ -59,7 +58,7 @@ export default class RecipeForm extends React.Component {
         e.preventDefault();
         this.setState({
             recipes: this.state.recipes.concat([{
-                id: uuid.v4(),
+                instructionID: uuid.v4(),
                 instructions: this.state.instructions,
             }])
         });
@@ -70,20 +69,28 @@ export default class RecipeForm extends React.Component {
         e.preventDefault();
         this.setState({
             recipes: this.state.recipes.concat([{
-                id: uuid.v4(),
+                ingredientID: uuid.v4(),
                 ingredients: this.state.ingredients,
             }])
         });
 
     };
 
+    removeInstruction(event, id) {
+        const array = [...this.state.recipes];
+        const index = array.indexOf(id);
+        array.splice(index, 1);
+        this.setState({recipes: array});
+    };
+
+
     render() {
         return(
-            <>
+            <div className="RecipeFormBox">
                 <NewRecipe addIngredient={this.addIngredients} addInstruction={this.addInstructions}
                 changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}/>
-                <RecipeLists class="recipe" recipes={this.state.recipes}/>
-            </>
+                <RecipeLists class="recipe" recipes={this.state.recipes} remove={this.removeInstruction}/>
+            </div>
         )
     }
 

@@ -5,24 +5,27 @@ export default class RecipeLists extends React.Component {
     render() {
         return (
             <div className="Lists">
-                <ul className="List-instructions">{this.props.recipes.map(recipe => {
-                        if (recipe.id !== 0) {
+                {/*<div className="ListBox">*/}
+                <ol className="ListInstructions">{this.props.recipes.map(recipe => {
+                        if (recipe.instructionID !== 0) {
                             return (
-                                <div key={recipe.id}>
-                                    <li><h1 className="Instructions">{recipe.instructions}</h1></li>
-                                    {/*<Button variant="dark" size="sm" className="Button-remove-instruction" onClick={e => {*/}
-                                    {/*    this.props.removeTest(e, instruction)*/}
-                                    {/*}}><FaTrash/></Button>*/}
+                                <div key={recipe.instructionID}>
+                                    <li className="Instructions">{recipe.instructions}
+                                    <i className="far fa-trash-alt" onClick={e =>
+                                    this.props.remove(e,recipe)}></i>
+                                    </li>
+
                                 </div>
                             )
                         }
                     }
-                )}</ul>
-                <ul className="List-ingredients">{this.props.recipes.map(recipe => {
-                        if (recipe.id !== 0) {
+                )}</ol>
+                {/*</div>*/}
+                <ul className="ListIngredients">{this.props.recipes.map(recipe => {
+                        if (recipe.ingredientID !== 0) {
                             return (
-                                <div key={recipe.id}>
-                                    <li><h1 className="Ingredients">{recipe.ingredients}</h1></li>
+                                <div key={recipe.ingredientID}>
+                                    <li className="Ingredients">{recipe.ingredients}</li>
                                     {/*<Button variant="dark" size="sm" className="Button-remove-ingredient" onClick={e => {*/}
                                     {/*    this.props.removeTest(e, ingredient)*/}
                                     {/*}}><FaTrash/></Button>*/}

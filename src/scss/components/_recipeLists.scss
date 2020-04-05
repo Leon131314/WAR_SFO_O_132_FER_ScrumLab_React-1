@@ -1,0 +1,30 @@
+@import './colors';
+
+.Lists {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 180px;
+  margin-top: -180px;
+  list-style-position:inside;
+}
+
+.ListInstructions {
+  //text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: initial;
+  overflow-y:scroll;
+  width: 500px;
+  margin-left: -25px;
+}
+
+.ListIngredients {
+  overflow-y:scroll;
+  word-wrap: break-word;
+  width: 500px;
+  margin-left: -140px;
+}
+
+.fa-trash-alt {
+  color: $trashIconColor;
+}
