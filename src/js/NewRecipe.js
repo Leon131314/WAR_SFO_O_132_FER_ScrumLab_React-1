@@ -12,11 +12,11 @@ class NewRecipe extends React.Component{
                     <div className="nr-recipe">
                         <div className="nr-recipe-name">
                             <h2>Nazwa przepisu</h2>
-                            <textarea className="nr-recipe-input" name="nazwa" cols="x" rows="y"></textarea>
+                            <textarea onChange={this.props.changeTitle} className="nr-recipe-input" name="nazwa" cols="x" rows="y"></textarea>
                         </div>
                         <div className="nr-recipe-name">
                             <h2>Opis przepisu</h2>
-                            <textarea className="nr-recipe-input" name="nazwa" cols="x" rows="y"></textarea>
+                            <textarea onChange={this.props.changeDescription} className="nr-recipe-input" name="nazwa" cols="x" rows="y"></textarea>
                         </div>
                     </div>
                     <div className="nr-ingr">
