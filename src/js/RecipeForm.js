@@ -1,6 +1,6 @@
 import NewRecipe from './NewRecipe'
 import RecipeLists from './RecipeFormList'
-import uuid from 'uuid';
+// import uuid from 'uuid';
 
 import React from "react";
 
@@ -58,7 +58,7 @@ export default class RecipeForm extends React.Component {
         e.preventDefault();
         this.setState({
             recipes: this.state.recipes.concat([{
-                instructionID: uuid.v4(),
+                // instructionID: uuid.v4(),
                 instructions: this.state.instructions,
             }])
         });
@@ -69,7 +69,7 @@ export default class RecipeForm extends React.Component {
         e.preventDefault();
         this.setState({
             recipes: this.state.recipes.concat([{
-                ingredientID: uuid.v4(),
+                // ingredientID: uuid.v4(),
                 ingredients: this.state.ingredients,
             }])
         });
