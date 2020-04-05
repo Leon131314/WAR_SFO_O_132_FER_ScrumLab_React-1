@@ -88,7 +88,8 @@ export default class RecipeForm extends React.Component {
         return(
             <div className="RecipeFormBox">
                 <NewRecipe addIngredient={this.addIngredients} addInstruction={this.addInstructions}
-                changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}/>
+                changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}
+                changeDescreiption={this.handleChangeDescription} changeTitle={this.handleChangeTitle}/>
                 <RecipeLists class="recipe" recipes={this.state.recipes} remove={this.removeInstruction}/>
             </div>
         )
