@@ -1,0 +1,83 @@
+.rec-main{
+  align-items: center;
+  background: $backgroundColor;
+  border: 1px dashed $headerColor;
+  color: lighten($headerColor, 10%);
+  display: flex;
+  flex-direction: column;
+  font-family: $textFont;
+  height: 80vh;
+  width: 80vw;
+  padding: 60px;
+
+}
+.rec-header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-style: solid;
+  border-width: 0 0 5px 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.rec-h1{
+  color: #E58A20;
+}
+
+.rec-button{
+  background-color: #339966;
+  height: 40px;
+  color: white;
+  border: #339966;
+  width: 40px;
+  font-size: 40px;
+}
+.tab-main{
+  width: 100%;
+}
+.tab{
+  width: 100%;
+}
+.tab-tr{
+  padding: 20px;
+
+}
+.tab-h{
+font-size: 30px;
+  text-transform: uppercase;
+  text-align: left;
+}
+th{
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-color: $textColor;
+}
+ td {
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  padding-top: 20px;
+  border-color: #A1A194;
+}
+ .tab-h{
+   font-size: 30px;
+   text-transform: uppercase;
+   text-align: left;
+ }
+ .tab-h-1{
+  @extend .tab-h;
+   width: 5%;
+ }
+.tab-h-2{
+  @extend .tab-h;
+  width: 40%;
+}
+.tab-h-3{
+  @extend .tab-h;
+  width: 45%;
+}
+.tab-h-4{
+  @extend .tab-h;
+  width: 10%;
+}

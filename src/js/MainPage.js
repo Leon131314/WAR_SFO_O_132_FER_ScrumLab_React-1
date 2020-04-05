@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 import Name from "./Name";
-import NewRecipe from "./NewRecipe";
+import Recipes from "./Recipes";
 import Pulpit from "./Pulpit";
 
 
@@ -10,7 +10,7 @@ const MainPageNav = ()=>(
     <nav className="navigation-main" >
         <ul className="mainNav-ul">
             <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} exact to="/main/pulpit">Pulpit<i className="fas fa-chevron-right"></i></NavLink></li>
-            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} to="/main/dlaczego/">Przepisy</NavLink></li>
+            <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} to="/main/przepisy/">Przepisy</NavLink></li>
             <li><NavLink className="nav" activeStyle={{fontColor: "#E58A20"}} to="/o mnie">Plany</NavLink></li> {/*//SPACJA W LINKU(!)*/}
         </ul>
     </nav>
@@ -57,16 +57,18 @@ class MainPage extends Component {
                 <TopPanel/>
                 <div className="mainPage-content">
                         <MainPageNav/>
-                        <div>
+
+
+                    <div>
                             <div className="mainPage-background">
                                 <div className="name-container">
                                     {
                                         {
                                             "/main/pulpit": <Pulpit/>,
+                                            "/main/przepisy/": <Recipes/>,
                                             "/main": <Name/>
                                         }[this.props.location.pathname]
                                     }
-                                    {/*<NewRecipe/>/!*TEST *!/*/}
                                 </div>
                             </div>
                         </div>
