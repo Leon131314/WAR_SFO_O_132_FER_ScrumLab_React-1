@@ -6,15 +6,14 @@ export default class RecipeLists extends React.Component {
         return (
             <div className="Lists">
                 {/*<div className="ListBox">*/}
-                <ol className="ListInstructions">{this.props.recipes.map(recipe => {
-                        if (recipe.instructionID !== 0) {
+                <ol className="ListInstructions">{this.props.instructions.map(instruction => {
+                        if (instruction.test !== '') {
                             return (
-                                <div key={recipe.instructionID}>
-                                    <li className="Instructions">{recipe.instructions}
-                                    <i className="far fa-trash-alt" onClick={e =>
-                                    this.props.remove(e,recipe)}></i>
+                                <div key={instruction.test}>
+                                    <li className="Instructions">{instruction.test} {' '}
+                                    <i className="far fa-trash-alt" onClick={e => {
+                                    this.props.remove(e,instruction)}}></i>
                                     </li>
-
                                 </div>
                             )
                         }
@@ -22,13 +21,13 @@ export default class RecipeLists extends React.Component {
                 )}</ol>
                 {/*</div>*/}
                 <ul className="ListIngredients">{this.props.recipes.map(recipe => {
-                        if (recipe.ingredientID !== 0) {
+                        if (recipe.ingredients !== '') {
                             return (
-                                <div key={recipe.ingredientID}>
-                                    <li className="Ingredients">{recipe.ingredients}</li>
-                                    {/*<Button variant="dark" size="sm" className="Button-remove-ingredient" onClick={e => {*/}
-                                    {/*    this.props.removeTest(e, ingredient)*/}
-                                    {/*}}><FaTrash/></Button>*/}
+                                <div key={recipe.ingredients}>
+                                    <li className="Ingredients">{recipe.ingredients} {'  '}
+                                        <i className="far fa-trash-alt" onClick={e => {
+                                            this.props.removeIngredient(e,recipe)}}></i>
+                                    </li>
                                 </div>
                             )
                         }
