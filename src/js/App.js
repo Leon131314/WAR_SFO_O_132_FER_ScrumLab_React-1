@@ -1,5 +1,4 @@
-import React from  "react";
-
+import React from "react";
 import Autor from "./autor";
 import Gallery from "./Gallery";
 import Stopka from "./Stopka";
@@ -8,8 +7,7 @@ import AboutApp from "./AboutApp";
 import SubmitForm from "./submitForm";
 import MainPage from "./MainPage";
 
-
-
+// import MainPage from "./MainPage"; //spojrz na komentarz w lini 37
 
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 
@@ -29,15 +27,6 @@ const Navigation = ()=>(
 const App = () => {
   return (
     <>
-        {/*<HashRouter>*/}{/*Cala ta sekcja z HashRouterem jest do usuniecia ==TK==*/}
-        {/*    <div>*/}
-        {/*        <Switch>*/}
-        {/*            <Route exact path="/main" component={MainPage} /> /!*Wydaje mi sie ze tutaj bedzie trzeba wsadzic component={MainPage} i dodac jeszcze kilka Route zeby podpiac wszytkie linki ==TK==*!/*/}
-        {/*            <Route path="/"/>*/}
-        {/*            /!*<Route component={NotFound}/>*!/*/}
-        {/*        </Switch>*/}
-        {/*    </div>*/}
-        {/*</HashRouter>*/}
         <Navigation />
         <Gallery/>
         <CallToAction/>
@@ -50,6 +39,7 @@ const App = () => {
         {/*<AddSchedule/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
         <MainPage/>
 
+        {/*<MainPage/>*/} {/*Na MainPage mozna przejsc klikajac w "Zaplanuj Posilki" na landing page, nie wrzucajmy tu spowrotem tego komponentu*/}
        
 
     </>
