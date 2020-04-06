@@ -6,3 +6,26 @@
   position: relative;
   left: -15vw;
 }
+
+
+
+.navArrow {
+  content: '';
+  text-transform: uppercase;
+  list-style: none;
+  //margin:70px;
+  text-decoration: none;
+  color: white;
+
+}
+
+.activeArrow:after {
+   content: " \003E";
+   color: $buttonsColor;
+ }
+
+.activeArrow:before {
+  content: "\007C";
+  width: 5px;
+  color: $buttonsColor;
+}

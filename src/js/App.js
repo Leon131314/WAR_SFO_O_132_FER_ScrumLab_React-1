@@ -37,7 +37,7 @@ const App = () => {
 
         {/*<AddRecipe/> tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
         {/*<AddSchedule/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
-        <MainPage/>
+        {/*<MainPage/>*/}
 
         {/*<MainPage/>*/} {/*Na MainPage mozna przejsc klikajac w "Zaplanuj Posilki" na landing page, nie wrzucajmy tu spowrotem tego komponentu*/}
        
