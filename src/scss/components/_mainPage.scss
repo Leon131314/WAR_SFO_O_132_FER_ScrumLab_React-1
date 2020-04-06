@@ -83,17 +83,17 @@
   background-repeat: no-repeat;
 }
 
-.mainNav-ul li:active:before {
-  background-color: $buttonsColor;
-  width: 10px;
-  height: 100%;
-  content: "";
-  padding-left: 20px;
-  margin-right: -10px;
-}
+//.mainNav-ul li:active:before {
+//  background-color: $buttonsColor;
+//  width: 10px;
+//  height: 100%;
+//  content: "";
+//  padding-left: 20px;
+//  margin-right: -10px;
+//}
 
-.mainNav-ul li:active {
-  .fa-chevron-right {
-    color: orange;
-  }
-}
+//.mainNav-ul li:active {
+//  .fa-chevron-right {
+//    color: orange;
+//  }
+//}
