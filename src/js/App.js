@@ -1,4 +1,4 @@
-import React rom "react";
+import React from  "react";
 
 import Autor from "./autor";
 import Gallery from "./Gallery";
@@ -10,7 +10,9 @@ import MainPage from "./MainPage";
 
 
 
+
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
+
 
 const Navigation = ()=>(
     <nav className="navigation" >
@@ -47,6 +49,7 @@ const App = () => {
         {/*<AddRecipe/> tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
         {/*<AddSchedule/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
         <MainPage/>
+
        
 
     </>

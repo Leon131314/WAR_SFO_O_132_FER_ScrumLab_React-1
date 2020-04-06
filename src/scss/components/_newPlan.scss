@@ -1,0 +1,106 @@
+.np-container {
+  margin-left: 160px;
+  margin-top: 150px;
+}
+.np-main{
+  align-items: center;
+  background: $backgroundColor;
+  border: 1px dashed $headerColor;
+  color: lighten($headerColor, 10%); //dalem 10% lighten bo sam $headerColor wydawal sie za ciemny w porownaniu do makiety ==TK==
+  display: flex;
+  flex-direction: column;
+  font-family: $textFont;
+  height: 100vh;
+  justify-content: center;
+  width: 80vw;
+  padding: 60px;
+}
+.np-header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-style: solid;
+  border-width: 0 0 3px 0;
+  text-transform: uppercase;
+  border-color: $textColor;
+}
+.np-h1{
+  color: #E58A20;
+  font-size: 24px;
+}
+.np-h2 {
+  font-size: 24px;
+}
+
+.np-button{
+  background-color: #E58A20;
+  height: 40px;
+  color: white;
+  border: #E58A20;
+  width: 130px;
+  font-weight: bold;
+}
+.np-plan{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  height: 30%;
+}
+.np-plan-name{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.np-plan-input{
+  width: 85%;
+  margin: 10px;
+  height: 60%;
+}
+.np-plan-input2{
+  width: 85%;
+  margin: 10px;
+  height: 90%;
+}
+.np-plan-name-number{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.np-plan-input-number {
+  width: 4%;
+  height: 60%;
+  margin-left: 3%;
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+.np-plan-table {
+  width: 100%;
+    tr {
+      border-bottom: solid 3px $textColor;
+      padding: .5em 0;
+
+      form {
+        width: 100%;
+        margin-left: 5%;
+        margin-top: 8%;
+    }
+  }
+}
+th {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.np-plan-line {
+  margin-left: 12%;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  width: 88%;
+  color: $textColor;
+  border-bottom: solid 3px $textColor;
+}
