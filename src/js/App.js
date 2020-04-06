@@ -5,8 +5,12 @@ import Stopka from "./Stopka";
 import CallToAction from "./CallToAction";
 import AboutApp from "./AboutApp";
 import SubmitForm from "./submitForm";
+import MainPage from "./MainPage";
+
 // import MainPage from "./MainPage"; //spojrz na komentarz w lini 37
+
 import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
+
 
 const Navigation = ()=>(
     <nav className="navigation" >
@@ -30,6 +34,11 @@ const App = () => {
         <AboutApp/>
         <SubmitForm/>
         <Stopka/>
+
+        {/*<AddRecipe/> tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
+        {/*<AddSchedule/>*/} {/*tutaj to dodalem tylko po to zeby zobaczyc jak wyglada*/}
+        <MainPage/>
+
         {/*<MainPage/>*/} {/*Na MainPage mozna przejsc klikajac w "Zaplanuj Posilki" na landing page, nie wrzucajmy tu spowrotem tego komponentu*/}
        
 
