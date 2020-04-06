@@ -1,7 +1,5 @@
 import NewRecipe from './NewRecipe'
 import RecipeLists from './RecipeFormList'
-// import uuid from 'uuid';
-
 import React from "react";
 
 
@@ -36,7 +34,7 @@ export default class RecipeForm extends React.Component {
             ...this.state,
             title: event.target.value
         });
-    }
+    };
 
     handleChangeDescription = (event) => {
         this.setState({
@@ -50,7 +48,7 @@ export default class RecipeForm extends React.Component {
             ...this.state,
             test: event.target.value
         });
-    }
+    };
 
     handleChangeIngredient = (event) => {
         this.setState({
@@ -94,15 +92,43 @@ export default class RecipeForm extends React.Component {
         this.setState({recipes: array});
     };
 
+    saveAndClose = () =>{
+        // debugger
+        //POST data to server
+        fetch('http://localhost:3000/recipes', {
+            method: 'POST',
+            body: JSON.stringify(this.state.recipes),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        //GET data from server
+        fetch('http://localhost:3000/recipes', {
+            method: 'GET'
+        }).then (resp => {
+            return resp.json();
+        }).then(recipeDB => {
+            console.log('odpowiedz z serwera: ', recipeDB)
+        }).catch(err => {
+            console.log('eRroR!', err)
+        });
+
+        this.props.handleClick();
+    };
+
+
 
     render() {
         return(
             <div className="RecipeFormBox">
                 <NewRecipe addIngredient={this.addIngredients} addInstruction={this.addInstructions}
                 changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}
-                changeDescreiption={this.handleChangeDescription} changeTitle={this.handleChangeTitle}/>
-                <RecipeLists class="recipe" instructions={this.state.instruction} recipes={this.state.recipes}
+                changeDescreiption={this.handleChangeDescription} changeTitle={this.handleChangeTitle}
+                saveAndClose={this.saveAndClose}/>
+                  <RecipeLists class="recipe" instructions={this.state.instruction} recipes={this.state.recipes}
                              remove={this.removeInstruction} removeIngredient={this.removeIngredient}/>
+
             </div>
         )
     }

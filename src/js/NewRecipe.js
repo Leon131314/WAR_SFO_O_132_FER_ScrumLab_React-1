@@ -1,13 +1,20 @@
 import React from 'react';
 
 class NewRecipe extends React.Component{
+
+    constructor(props) {
+        super(props);
+
+    }
+
+
     render(){
         return (
            <div>
                 <div className="nr-main">
                     <div className="nr-header">
                         <h1 className="nr-h1">Nowy przepis</h1>
-                        <button className="nr-button"> Zapisz i zamknij</button>
+                        <button className="nr-button" onClick={this.props.saveAndClose}> Zapisz i zamknij</button>
                     </div>
                     <div className="nr-recipe">
                         <div className="nr-recipe-name">

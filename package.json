@@ -13,7 +13,7 @@
     "react-slideshow-image": "^1.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3006 react-scripts start",
     "build": "react-scripts build",
     "api": "json-server database/db.json"
   },

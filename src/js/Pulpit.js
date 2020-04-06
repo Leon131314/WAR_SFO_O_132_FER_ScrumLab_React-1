@@ -11,19 +11,18 @@ class Pulpit extends Component{
         this.state = {
             AddRecipeClickStatus: false
         }
-
     }
 
     handleClick = () =>{
-        this.setState({
-            AddRecipeClickStatus: true
-        });
+        this.setState(prevState => ({
+            AddRecipeClickStatus: !prevState.AddRecipeClickStatus
+        }));
     };
 
     render() {
-        console.log("button addRecipe kliekniety: "+this.state.AddRecipeClickStatus);
+        console.log(this.state.AddRecipeClickStatus);
         if (this.state.AddRecipeClickStatus) {
-            return <RecipeForm/>
+            return <RecipeForm handleClick={this.handleClick}/>
         } else {
             return(
                 <div className='pulpit'>

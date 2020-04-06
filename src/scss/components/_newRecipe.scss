@@ -1,3 +1,5 @@
+@import "colors";
+
 .nr-main{
   align-items: center;
   background: $backgroundColor;
@@ -30,6 +32,15 @@
   color: white;
   border: #E58A20;
   width: 120px;
+  &:hover{
+    background: white;
+    color: #E58A20;
+    border: 1px solid #E58A20;
+  }
+  &:active{
+    background: $sideNavColor;
+    color: white;
+  }
 }
 .nr-recipe{
   display: flex;
