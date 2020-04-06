@@ -3,6 +3,8 @@ import WidgetAddRecipe from "./WidgetAddRecipe";
 import WidgetAddSchedule from "./WidgetAddSchedule";
 import Messages from "./Messages";
 import RecipeForm from "./RecipeForm";
+import NewPlan from "./NewPlan";
+import WeekView from "./WeekView";
 
 class Pulpit extends Component{
 
@@ -29,6 +31,8 @@ class Pulpit extends Component{
                     <WidgetAddRecipe handleClick={this.handleClick}/>
                     <WidgetAddSchedule/>
                     <Messages/>
+                    <NewPlan/>
+                    <WeekView/>
                 </div>
             )
         }
