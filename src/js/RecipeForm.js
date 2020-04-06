@@ -1,6 +1,5 @@
 import NewRecipe from './NewRecipe'
 import RecipeLists from './RecipeFormList'
-import uuid from 'uuid';
 import React from "react";
 
 
@@ -10,16 +9,22 @@ export default class RecipeForm extends React.Component {
         this.state = {
             recipes: [
                 {
-                    id: 0,
-                    ingredientID: 0,
-                    instructionID: 0,
+                    // id: 0,
+                    // ingredientID: 0,
+                    // instructionID: 0,
                     title: '',
                     description: '',
-                    instructions: '',
+                    // instructions: '',
                     ingredients: '',
                     counter: 0,
                 },
+            ],
+            instruction: [
+                {
+                    test: ''
+                }
             ]
+
         };
 
     }
@@ -41,7 +46,7 @@ export default class RecipeForm extends React.Component {
     handleChangeInstruction = (event) => {
         this.setState({
             ...this.state,
-            instructions: event.target.value
+            test: event.target.value
         });
     };
 
@@ -56,26 +61,31 @@ export default class RecipeForm extends React.Component {
     addInstructions = (e) => {
         e.preventDefault();
         this.setState({
-            recipes: this.state.recipes.concat([{
-                instructionID: uuid.v4(),
-                instructions: this.state.instructions,
+            instruction: this.state.instruction.concat([{
+                test: this.state.test,
             }])
         });
-
     };
 
     addIngredients = (e) => {
         e.preventDefault();
         this.setState({
             recipes: this.state.recipes.concat([{
-                ingredientID: uuid.v4(),
+                // ingredientID: uuid.v4(),
                 ingredients: this.state.ingredients,
             }])
         });
 
     };
 
-    removeInstruction(event, id) {
+    removeInstruction = (event, id) => {
+        const array = [...this.state.instruction];
+        const index = array.indexOf(id);
+        array.splice(index, 1);
+        this.setState({instruction: array});
+    };
+
+    removeIngredient = (event, id) => {
         const array = [...this.state.recipes];
         const index = array.indexOf(id);
         array.splice(index, 1);
@@ -116,7 +126,9 @@ export default class RecipeForm extends React.Component {
                 changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}
                 changeDescreiption={this.handleChangeDescription} changeTitle={this.handleChangeTitle}
                 saveAndClose={this.saveAndClose}/>
-                <RecipeLists class="recipe" recipes={this.state.recipes} remove={this.removeInstruction}/>
+                  <RecipeLists class="recipe" instructions={this.state.instruction} recipes={this.state.recipes}
+                             remove={this.removeInstruction} removeIngredient={this.removeIngredient}/>
+
             </div>
         )
     }
