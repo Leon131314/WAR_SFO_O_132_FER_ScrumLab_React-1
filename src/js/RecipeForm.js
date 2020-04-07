@@ -7,26 +7,12 @@ export default class RecipeForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            recipes: [
-                {
-                    // id: 0,
-                    // ingredientID: 0,
-                    // instructionID: 0,
-                    title: '',
-                    description: '',
-                    // instructions: '',
-                    ingredients: '',
-                    counter: 0,
-                },
-            ],
-            instruction: [
-                {
-                    test: ''
-                }
-            ]
-
+            id:'',
+            title: '',
+            description: '',
+            steps: [''],
+            ingredients: [''],
         };
-
     }
 
     handleChangeTitle = (event) => {
@@ -43,56 +29,61 @@ export default class RecipeForm extends React.Component {
         });
     };
 
-    handleChangeInstruction = (event) => {
-        this.setState({
-            ...this.state,
-            test: event.target.value
-        });
+    handleChangeInstruction = event => {
+        this.setState({value: event.target.value});
     };
 
     handleChangeIngredient = (event) => {
-        this.setState({
-            ...this.state,
-            ingredients: event.target.value
-        });
+        this.setState({value: event.target.value});
     };
 
 
     addInstructions = (e) => {
         e.preventDefault();
-        this.setState({
-            instruction: this.state.instruction.concat([{
-                test: this.state.test,
-            }])
+        this.setState(state => {
+            const steps = state.steps.concat(state.value)
+            return {
+                steps,
+                value:'',
+            }
         });
+
     };
 
     addIngredients = (e) => {
         e.preventDefault();
-        this.setState({
-            recipes: this.state.recipes.concat([{
-                // ingredientID: uuid.v4(),
-                ingredients: this.state.ingredients,
-            }])
+        this.setState(state => {
+            const ingredients = state.ingredients.concat(state.value)
+            return {
+                ingredients,
+                value:'',
+            }
         });
 
     };
 
     removeInstruction = (event, id) => {
-        const array = [...this.state.instruction];
+        const array = [...this.state.steps];
         const index = array.indexOf(id);
         array.splice(index, 1);
-        this.setState({instruction: array});
+        this.setState({steps: array});
     };
 
     removeIngredient = (event, id) => {
-        const array = [...this.state.recipes];
+        const array = [...this.state.ingredients];
         const index = array.indexOf(id);
         array.splice(index, 1);
-        this.setState({recipes: array});
+        this.setState({ingredients: array});
     };
 
     saveAndClose = () =>{
+        let counter = this.state.id + 1;
+
+        this.setState({
+            ...this.state,
+            id: counter
+        });
+
         // debugger
         //POST data to server
         fetch('http://localhost:3000/recipes', {
@@ -123,10 +114,10 @@ export default class RecipeForm extends React.Component {
         return(
             <div className="RecipeFormBox">
                 <NewRecipe addIngredient={this.addIngredients} addInstruction={this.addInstructions}
-                changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}
-                changeDescreiption={this.handleChangeDescription} changeTitle={this.handleChangeTitle}
-                saveAndClose={this.saveAndClose}/>
-                  <RecipeLists class="recipe" instructions={this.state.instruction} recipes={this.state.recipes}
+                           changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}
+                           changeDescreiption={this.handleChangeDescription} changeTitle={this.handleChangeTitle}
+                           saveAndClose={this.saveAndClose}/>
+                <RecipeLists class="recipe" instructions={this.state.steps} ingredients={this.state.ingredients}
                              remove={this.removeInstruction} removeIngredient={this.removeIngredient}/>
 
             </div>
