@@ -32,7 +32,7 @@ class Pulpit extends Component{
                     <WidgetAddSchedule/>
                     <Messages/>
                     {/*<NewPlan/>*/}
-                    <WeekView/>
+                    {/*<WeekView/>*/}
                 </div>
             )
         }
