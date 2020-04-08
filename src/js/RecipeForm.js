@@ -7,18 +7,18 @@ export default class RecipeForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            id:'',
-            title: '',
+            // id:'', //wychodzi na to ze "id" jest niepotrzebne w state bo API samo dodaje id do kazego przepisu
+            name: '',
             description: '',
-            steps: [''],
-            ingredients: [''],
+            steps: [],
+            ingredients: [],
         };
     }
 
     handleChangeTitle = (event) => {
         this.setState({
             ...this.state,
-            title: event.target.value
+            name: event.target.value
         });
     };
 
@@ -41,10 +41,10 @@ export default class RecipeForm extends React.Component {
     addInstructions = (e) => {
         e.preventDefault();
         this.setState(state => {
-            const steps = state.steps.concat(state.value)
+            const steps = state.steps.concat(state.value);
             return {
                 steps,
-                value:'',
+                value:''
             }
         });
 
@@ -53,10 +53,10 @@ export default class RecipeForm extends React.Component {
     addIngredients = (e) => {
         e.preventDefault();
         this.setState(state => {
-            const ingredients = state.ingredients.concat(state.value)
+            const ingredients = state.ingredients.concat(state.value);
             return {
                 ingredients,
-                value:'',
+                value:''
             }
         });
 
@@ -77,18 +77,18 @@ export default class RecipeForm extends React.Component {
     };
 
     saveAndClose = () =>{
-        let counter = this.state.id + 1;
+        // let counter = this.state.id + 1;
 
-        this.setState({
-            ...this.state,
-            id: counter
-        });
+        // this.setState({
+        //     ...this.state,
+            // id: counter
+        // });
 
         // debugger
         //POST data to server
         fetch('http://localhost:3000/recipes', {
             method: 'POST',
-            body: JSON.stringify(this.state.recipes),
+            body: JSON.stringify(this.state),
             headers: {
                 "Content-Type": "application/json"
             }
@@ -115,7 +115,7 @@ export default class RecipeForm extends React.Component {
             <div className="RecipeFormBox">
                 <NewRecipe addIngredient={this.addIngredients} addInstruction={this.addInstructions}
                            changeIngredient={this.handleChangeIngredient} changeInstruction={this.handleChangeInstruction}
-                           changeDescreiption={this.handleChangeDescription} changeTitle={this.handleChangeTitle}
+                           changeDescription={this.handleChangeDescription} changeTitle={this.handleChangeTitle}
                            saveAndClose={this.saveAndClose}/>
                 <RecipeLists class="recipe" instructions={this.state.steps} ingredients={this.state.ingredients}
                              remove={this.removeInstruction} removeIngredient={this.removeIngredient}/>
