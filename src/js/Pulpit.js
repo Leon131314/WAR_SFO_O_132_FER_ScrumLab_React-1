@@ -31,8 +31,8 @@ class Pulpit extends Component{
                     <WidgetAddRecipe handleClick={this.handleClick}/>
                     <WidgetAddSchedule/>
                     <Messages/>
-                    <NewPlan/>
-                    <WeekView/>
+                    {/*<NewPlan/>*/}
+                    {/*<WeekView/>*/}
                 </div>
             )
         }

@@ -7,12 +7,12 @@ export default class RecipeLists extends React.Component {
             <div className="Lists">
                 {/*<div className="ListBox">*/}
                 <ol className="ListInstructions">{this.props.instructions.map(instruction => {
-                        if (instruction.test !== '') {
+                        if (instruction !== '') {
                             return (
-                                <div key={instruction.test}>
-                                    <li className="Instructions">{instruction.test} {' '}
-                                    <i className="far fa-trash-alt" onClick={e => {
-                                    this.props.remove(e,instruction)}}></i>
+                                <div key={instruction}>
+                                    <li className="Instructions">{instruction} {' '}
+                                        <i className="far fa-trash-alt" onClick={e => {
+                                            this.props.remove(e,instruction)}}></i>
                                     </li>
                                 </div>
                             )
@@ -20,13 +20,13 @@ export default class RecipeLists extends React.Component {
                     }
                 )}</ol>
                 {/*</div>*/}
-                <ul className="ListIngredients">{this.props.recipes.map(recipe => {
-                        if (recipe.ingredients !== '') {
+                <ul className="ListIngredients">{this.props.ingredients.map(ingredient => {
+                        if (ingredient !== '') {
                             return (
-                                <div key={recipe.ingredients}>
-                                    <li className="Ingredients">{recipe.ingredients} {'  '}
+                                <div key={ingredient}>
+                                    <li className="Ingredients">{ingredient} {'  '}
                                         <i className="far fa-trash-alt" onClick={e => {
-                                            this.props.removeIngredient(e,recipe)}}></i>
+                                            this.props.removeIngredient(e,ingredient)}}></i>
                                     </li>
                                 </div>
                             )
