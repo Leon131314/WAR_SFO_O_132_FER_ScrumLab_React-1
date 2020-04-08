@@ -7,20 +7,20 @@ class NewPlan extends React.Component{
                 <div className="np-main">
                     <div className="np-header">
                         <h1 className="np-h1">Nowy plan</h1>
-                        <button className="np-button"> Zapisz i zamknij</button>
+                        <button className="np-button" onClick={this.props.saveAndClose}> Zapisz i zamknij</button>
                     </div>
                     <div className="np-plan">
                         <div className="np-plan-name">
                             <h2 className="np-h2">Nazwa planu</h2>
-                            <textarea className="np-plan-input" name="nazwa" cols="x" rows="y"></textarea>
+                            <textarea onChange={this.props.addTitle} className="np-plan-input" name="nazwa" cols="x" rows="y"></textarea>
                         </div>
                         <div className="np-plan-name">
                             <h2 className="np-h2">Opis planu</h2>
-                            <textarea className="np-plan-input2" name="nazwa" cols="x" rows="y"></textarea>
+                            <textarea onChange={this.props.addDescription} className="np-plan-input2" name="nazwa" cols="x" rows="y"></textarea>
                         </div>
                         <div className="np-plan-name-number">
                             <h2 className="np-h2">Numer tygodnia</h2>
-                            <textarea className="np-plan-input-number" name="nazwa" cols="x" rows="1"></textarea>
+                            <textarea onChange={this.props.addWeekNumberId} className="np-plan-input-number" name="nazwa" cols="x" rows="1"></textarea>
                         </div>
                     </div>
                     <div className="np-plan-line"></div>
@@ -37,7 +37,7 @@ class NewPlan extends React.Component{
                             <th>PONIEDZIAŁEK</th>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -46,7 +46,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -55,7 +55,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -64,7 +64,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -73,7 +73,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -85,7 +85,7 @@ class NewPlan extends React.Component{
                             <th>WTOREK</th>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -94,7 +94,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -103,7 +103,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -112,7 +112,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -121,7 +121,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -133,7 +133,7 @@ class NewPlan extends React.Component{
                             <th>ŚRODA</th>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -142,7 +142,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -151,7 +151,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -160,7 +160,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -169,7 +169,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -181,7 +181,7 @@ class NewPlan extends React.Component{
                             <th>CZWARTEK</th>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -190,7 +190,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -199,7 +199,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -208,7 +208,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -217,7 +217,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -229,7 +229,7 @@ class NewPlan extends React.Component{
                             <th>PIĄTEK</th>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -238,7 +238,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -247,7 +247,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -256,7 +256,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -265,7 +265,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -277,7 +277,7 @@ class NewPlan extends React.Component{
                             <th>SOBOTA</th>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -286,7 +286,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -295,7 +295,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -304,7 +304,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -313,7 +313,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -325,7 +325,7 @@ class NewPlan extends React.Component{
                             <th>NIEDZIELA</th>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -334,7 +334,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -343,7 +343,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -352,7 +352,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
@@ -361,7 +361,7 @@ class NewPlan extends React.Component{
                             </td>
                             <td>
                                 <form action="">
-                                    <select name="dish name">
+                                    <select onChange={this.props.recipesTitle} name="dish name">
                                         <option selected>Zapiekanka z ziemniakami</option>
                                         <option>druga możliwość</option>
                                         <option>trzecia możliwość</option>
