@@ -1,17 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const WidgetAddSchedule = () =>{
+class WidgetAddSchedule extends Component {
 
-    const handleClick = () =>{
-        console.log('click') //tutaj bedziemy chcieli wywolac okno dodania planu, ale jeszcze go nie mamy ==TK==
-    };
+    constructor(props) {
+        super(props);
+    }
 
-    return(
-        <div className="widget addSchedule" onClick={handleClick}>
-            <i className="far fa-plus-square"></i>
-            <span className='widget-txt'>dodaj plan</span>
-        </div>
-    )
+    render() {
+        return (
+            <div className="widget addSchedule" onClick={this.props.handleScheduleClick}>
+                <i className="far fa-plus-square"></i>
+                <span className='widget-txt'>dodaj plan</span>
+            </div>
+        )
+    }
 };
 
 export default WidgetAddSchedule;

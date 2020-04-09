@@ -21,7 +21,7 @@ class Recipes extends React.Component{
     ).catch(err => {
         console.log('eRroR!', err)
     });
-        console.log(this.state.recipes)
+        // console.log(this.state.recipes)
     };
 
     delete = () => {//////////////do uzupełnienia/////////////////

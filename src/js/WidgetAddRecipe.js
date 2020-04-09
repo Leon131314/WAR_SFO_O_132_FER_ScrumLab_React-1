@@ -9,7 +9,7 @@ class WidgetAddRecipe extends Component{
 
     render() {
         return(
-            <div className="widget addRecipe" onClick={this.props.handleClick}>
+            <div className="widget addRecipe" onClick={this.props.handleRecipeClick}>
                 <i className="far fa-plus-square"></i>
                 <span className='widget-txt'>dodaj przepis</span>
             </div>

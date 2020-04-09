@@ -4,14 +4,14 @@ import {HashRouter, Switch,Route,NavLink} from "react-router-dom";
 import Name from "./Name";
 import Recipes from "./Recipes";
 import Pulpit from "./Pulpit";
-
+import WeekView from "./WeekView";
 
 const MainPageNav = ()=>(
     <nav className="navigation-main" >
         <ul className="mainNav-ul">
             <li><NavLink className="navArrow" activeClassName="activeArrow" activeStyle={{fontColor: "#E58A20"}} exact to="/main/pulpit">Pulpit<i activeClassName="fas fa-chevron-right"></i></NavLink></li>
             <li><NavLink className="navArrow" activeClassName="activeArrow" activeStyle={{fontColor: "#E58A20"}} to="/main/przepisy/">Przepisy</NavLink></li>
-            <li><NavLink className="navArrow" activeClassName="activeArrow" activeStyle={{fontColor: "#E58A20"}} to="/o mnie">Plany</NavLink></li> {/*//SPACJA W LINKU(!)*/}
+            <li><NavLink className="navArrow" activeClassName="activeArrow" activeStyle={{fontColor: "#E58A20"}} to="/main/plany">Plany</NavLink></li>
         </ul>
     </nav>
 );
