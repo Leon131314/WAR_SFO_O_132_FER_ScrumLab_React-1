@@ -105,7 +105,7 @@ export default class RecipeForm extends React.Component {
             console.log('eRroR!', err)
         });
 
-        this.props.handleClick();
+        this.props.handleRecipeClick();
     };
 
 

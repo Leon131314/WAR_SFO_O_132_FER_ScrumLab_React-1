@@ -11,25 +11,35 @@ class Pulpit extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            AddRecipeClickStatus: false
+            AddRecipeClickStatus: false,
+            AddScheduleClickStatus: false
         }
     }
 
-    handleClick = () =>{
+    handleRecipeClick = () =>{
         this.setState(prevState => ({
             AddRecipeClickStatus: !prevState.AddRecipeClickStatus
+        }));
+    };
+
+    handleScheduleClick = () =>{
+        this.setState(prevState => ({
+            AddScheduleClickStatus: !prevState.AddScheduleClickStatus
         }));
     };
 
     render() {
         console.log(this.state.AddRecipeClickStatus);
         if (this.state.AddRecipeClickStatus) {
-            return <RecipeForm handleClick={this.handleClick}/>
+            return <RecipeForm handleRecipeClick={this.handleRecipeClick}/>
+        }
+        if (this.state.AddScheduleClickStatus) {
+            return <NewPlan handleScheduleClick={this.handleScheduleClick}/>
         } else {
             return(
                 <div className='pulpit'>
-                    <WidgetAddRecipe handleClick={this.handleClick}/>
-                    <WidgetAddSchedule/>
+                    <WidgetAddRecipe handleRecipeClick={this.handleRecipeClick}/>
+                    <WidgetAddSchedule handleScheduleClick={this.handleScheduleClick}/>
                     <Messages/>
                     {/*<NewPlan/>*/}
                     {/*<WeekView/>*/}
