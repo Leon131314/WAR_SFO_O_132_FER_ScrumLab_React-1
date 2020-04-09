@@ -20,28 +20,40 @@ const MainPageNav = ()=>(
 // const TopPanel =() =>(
 class TopPanel extends Component {
 ///////imię/////////
-        state = {
-            name: null,
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: [],
         };
-
+    }
         componentDidMount() {
-            const name = JSON.parse(localStorage.getItem('name'));
-            console.log(name);
-            this.setState({
-                name: name,
+            // const name = JSON.parse(localStorage.getItem('name'));
+            // console.log(name);
+            // this.setState({
+            //     name: name,
+            // });
+            fetch('http://localhost:3000/user', {
+                method: 'GET'
+            }).then (resp => {
+                return resp.json();
+            }).then(nam => {
+                    this.setState({ name: nam });
+                    console.log(nam)
+            }).catch(err => {
+                console.log('eRroR!', err)
             });
         }
+
 ///////imię/////////
 
             render(){
+                console.log(this.state.name)
                 return (
                     <div className="topPanel">
                         <h1 className="nav-h">Zaplanuj </h1>
-                        <h1 className="rightSide">  {this.state.name} <i className="fas fa-user-circle icon-2x"></i></h1>
+                        <h1 className="rightSide">{this.state.name.name}<i className="fas fa-user-circle icon-2x"></i></h1>
                     </div>
-                )
-            }
-            ;
+                )};
 }
 
 class MainPage extends Component {

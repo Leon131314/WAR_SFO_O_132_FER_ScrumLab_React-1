@@ -1,6 +1,7 @@
 {
   "user": {
-    "name": ""
+    "name": "imie",
+    "clicked": false
   },
   "recipes": [
     {
