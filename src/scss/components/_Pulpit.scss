@@ -2,12 +2,10 @@
 @import "fonts";
 
 .pulpit {
-  display: flex;
+  display: block;
   position: relative;
-  left: -15vw;
+  left: -1vw;
 }
-
-
 
 .navArrow {
   content: '';
@@ -28,4 +26,9 @@
   content: "\007C";
   width: 5px;
   color: $buttonsColor;
+}
+
+.wrp {
+  height: 38vh;
+  display: flex;
 }

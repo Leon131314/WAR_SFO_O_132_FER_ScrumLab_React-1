@@ -38,11 +38,13 @@ class Pulpit extends Component{
         } else {
             return(
                 <div className='pulpit'>
+                    <div className="wrp">
                     <WidgetAddRecipe handleRecipeClick={this.handleRecipeClick}/>
                     <WidgetAddSchedule handleScheduleClick={this.handleScheduleClick}/>
                     <Messages/>
+                    </div>
                     {/*<NewPlan/>*/}
-                    {/*<WeekView/>*/}
+                    <WeekView/>
                 </div>
             )
         }
