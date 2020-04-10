@@ -1,10 +1,15 @@
+.noPlan-div{
+  position: relative;
+  left: 232px;
+}
+
 .week-view-container {
   width: 1050px;
-  border: dotted 2px $textColor;
+  //border: dotted 2px $textColor;
 //usunąć te 3 pozycje:
-  margin-top: 180px;
-  margin-left: 265px;
-  margin-bottom: 10px;
+//  margin-top: 180px;
+//  margin-left: 265px;
+//  margin-bottom: 10px;
 }
 .week-view-wrapper {
   display: grid;
