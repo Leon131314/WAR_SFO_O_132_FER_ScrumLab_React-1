@@ -24,10 +24,14 @@ class Recipes extends React.Component{
         // console.log(this.state.recipes)
     };
 
-    delete = () => {//////////////do uzupełnienia/////////////////
-        this.setState({
-            recipes:[],
-        });
+    delete = item => {
+            let del = this.state.recipes.filter(el => {
+                return el.id !== item.id;
+            });
+         console.log(del)
+         this.setState({
+                recipes:del
+         });
     };
 
     addRecipe = () => {//////////////do uzupełnienia/////////////////
@@ -39,11 +43,8 @@ class Recipes extends React.Component{
     };
 
     render(){
-        console.log(this.state.recipes)
 
         return (
-
-
             <div className="rec-main">
                     <div className="rec-header">
                         <h1 className="rec-h1">Lista przepisów</h1>
@@ -61,13 +62,13 @@ class Recipes extends React.Component{
 
                             {this.state.recipes.map(
                                 (item,index) => (
-                                    <tr>
+                                    <tr key={item.id}>
                                         <td>{item.id} </td>
                                         <td>{item.name}</td>
                                         <td>{item.description}</td>
                                         <td>
                                             <button type="button" onClick={this.editRecipe} className="rec-btn" > <i className="far fa-edit " ></i> </button>
-                                            <button type="button" onClick={this.delete} className="rec-btn"> <i className="far fa-trash-alt" aria-hidden="true"></i> </button>
+                                            <button type="button" onClick={() => this.delete(item)} className="rec-btn"> <i className="far fa-trash-alt" aria-hidden="true"></i> </button>
                                         </td>
                                     </tr>
                         ))}
