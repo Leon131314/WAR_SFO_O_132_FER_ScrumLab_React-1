@@ -12,6 +12,9 @@ export default class RecipeForm extends React.Component {
             description: '',
             steps: [],
             ingredients: [],
+            showMe: [],
+            showSteps: '',
+            showIngredient:''
         };
     }
 
@@ -29,26 +32,73 @@ export default class RecipeForm extends React.Component {
         });
     };
 
+
+
+
+
+
+    // -----------------   INSTRUKCJE  -----------------  ///
+
     handleChangeInstruction = event => {
         this.setState({value: event.target.value});
     };
-
-    handleChangeIngredient = (event) => {
-        this.setState({value: event.target.value});
-    };
-
 
     addInstructions = (e) => {
         e.preventDefault();
         this.setState(state => {
             const steps = state.steps.concat(state.value);
+            const showMe = state.showMe.concat(true)
             return {
+                showMe,
                 steps,
                 value:''
             }
         });
 
     };
+
+
+    clickEditInstruction =(e, id) => {
+
+        const arraySteps = [...this.state.steps];
+        const indexElement = arraySteps.indexOf(id);
+        const indexShow = indexElement;
+
+        this.setState({showSteps: indexShow});
+    };
+
+    handleChangeEditInstructions =(event) => {
+        this.setState({value: event.target.value});
+    };
+
+
+    saveEditInstruction =(event,id)=> {
+
+        const array = [...this.state.steps];
+        const index = array.indexOf(id);
+        this.state.steps[index] = this.state.value;
+        this.forceUpdate();
+        this.setState({
+            ...this.state,
+            showSteps: 1000,
+        });
+    };
+
+
+    removeInstruction = (event, id) => {
+        const array = [...this.state.steps];
+        const index = array.indexOf(id);
+        array.splice(index, 1);
+        this.setState({steps: array});
+    };
+
+    // -----------------   SKLADNIKI  -----------------  ///
+
+
+    handleChangeIngredient = (event) => {
+        this.setState({value: event.target.value});
+    };
+
 
     addIngredients = (e) => {
         e.preventDefault();
@@ -62,12 +112,31 @@ export default class RecipeForm extends React.Component {
 
     };
 
-    removeInstruction = (event, id) => {
-        const array = [...this.state.steps];
-        const index = array.indexOf(id);
-        array.splice(index, 1);
-        this.setState({steps: array});
+    clickEditIngredient =(e, id) => {
+
+        const arraySteps = [...this.state.ingredients];
+        const indexElement = arraySteps.indexOf(id);
+        const indexShow = indexElement;
+
+        this.setState({showIngredient: indexShow});
     };
+
+    handleChangeEditIngredients =(event) => {
+        this.setState({value: event.target.value});
+    };
+
+
+    saveEditIngredient =(event,id)=> {
+        const array = [...this.state.ingredients];
+        const index = array.indexOf(id);
+        this.state.ingredients[index] = this.state.value;
+        this.forceUpdate();
+        this.setState({
+            ...this.state,
+            showIngredient: 1000,
+        });
+    };
+
 
     removeIngredient = (event, id) => {
         const array = [...this.state.ingredients];
@@ -111,6 +180,7 @@ export default class RecipeForm extends React.Component {
 
 
     render() {
+        let test = 'test';
         return(
             <div className="RecipeFormBox">
                 <NewRecipe addIngredient={this.addIngredients} addInstruction={this.addInstructions}
@@ -118,7 +188,11 @@ export default class RecipeForm extends React.Component {
                            changeDescription={this.handleChangeDescription} changeTitle={this.handleChangeTitle}
                            saveAndClose={this.saveAndClose}/>
                 <RecipeLists class="recipe" instructions={this.state.steps} ingredients={this.state.ingredients}
-                             remove={this.removeInstruction} removeIngredient={this.removeIngredient}/>
+                             remove={this.removeInstruction} removeIngredient={this.removeIngredient}
+                            test = {test} indexShow={this.state.showSteps} changeInstruction={this.handleChangeEditInstructions}
+                            clickEdit={this.clickEditInstruction} clickSave={this.saveEditInstruction}
+                            indexShowIngredient={this.state.showIngredient} clickSaveIngredient={this.saveEditIngredient}
+                            changeIngredient={this.handleChangeEditIngredients} clickEditIngredient={this.clickEditIngredient}/>
 
             </div>
         )
